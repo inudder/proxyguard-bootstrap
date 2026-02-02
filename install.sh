@@ -20,4 +20,5 @@ else
 fi
 
 cd "$APP_DIR"
-bash deploy.sh
+# Pass /dev/tty to deploy.sh so read prompts work when called via pipe (curl | bash)
+bash deploy.sh </dev/tty
